@@ -1,11 +1,12 @@
 import './App.css';
-import Items from '/items';
+import Items from './Items';
 import {useState} from 'react'
 
 function App() {
-  [items, setItems] = useState([])
-
   
+  const [items, setItems] = useState([])
+
+
   return (
     <div className="App">
      <Items items={items} setItems={setItems}/>

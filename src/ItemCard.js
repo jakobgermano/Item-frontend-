@@ -1,7 +1,9 @@
-function ItemCard() {
+import React from 'react'
+
+function ItemCard({item}) {
     return(
         <div>
-
+            {item.name}
         </div>
     )
 }

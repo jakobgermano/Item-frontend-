@@ -9,14 +9,14 @@ function Items({items, setItems}) {
         .then((i) => {
             setItems(i.items)
         })
-    })
+    }, [])
 
-    const allItems = items&&items.map((i) => <ItemCard/>)
+    const allItems = items&&items.map((i) => <ItemCard items={items} setItems={setItems} item={i} key={i.id}/>)
 
 
     return(
         <div>
-
+            {allItems}
         </div>
     )
 }
