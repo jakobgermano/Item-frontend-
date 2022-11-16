@@ -3,7 +3,6 @@ import Items from './Items';
 import {useState} from 'react'
 
 function App() {
-  
   const [items, setItems] = useState([])
 
 

@@ -1,7 +1,7 @@
-import {useEffect} from 'react'
-import ItemCard from './ItemCard'
+import React, {useEffect} from 'react';
+import ItemCard from './ItemCard';
 
-function Items({items, setItems}) {
+function Items({ items, setItems}) {
 
     useEffect(() => {
         fetch(`/items`) 
@@ -16,6 +16,7 @@ function Items({items, setItems}) {
 
     return(
         <div>
+            <h1>Items</h1>
             {allItems}
         </div>
     )
