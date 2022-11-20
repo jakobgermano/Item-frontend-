@@ -7,7 +7,7 @@ function Items({ items, setItems}) {
         fetch(`/items`) 
         .then((r) => r.json())
         .then((i) => {
-            setItems(i.items)
+            setItems(i)
         })
     }, [])
 
