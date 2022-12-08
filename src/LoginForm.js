@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import SignUpForm from "./SignUpForm";
 
 function LoginForm({setUser}){
     const [username, setUsername] = useState("")
@@ -60,6 +61,7 @@ function LoginForm({setUser}){
                     </div>
                 </form>
                 <h4>Need to create an account?</h4>
+                <SignUpForm/>
             </div>
         </div>
         </>

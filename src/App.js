@@ -7,12 +7,20 @@ function App() {
   const [items, setItems] = useState([])
   const [user, setUser] = useState(null)
 
+  function handleLogout(){
+    fetch('/logout', {
+      method: 'DELETE'
+    })
+    .then((r) => setUser(null))
+  }
+
 
   if (!user) return <LoginForm setUser = {setUser}/>
 
   return (
     <div className="App">
-     <Items items={items} setItems={setItems}/>
+      <button id="logout" onClick={handleLogout} variant="contained" size="medium"> Logout</button>
+    <Items items={items} setItems={setItems}/>
     </div>
   );
 }
