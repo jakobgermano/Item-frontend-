@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react';
 import ItemCard from './ItemCard';
 
-function Items({ items, setItems}) {
+function Items({ items, setItems, user}) {
 
     useEffect(() => {
-        fetch(`/items`) 
+        fetch(`users/${user.id}`) 
         .then((r) => r.json())
         .then((i) => {
-            setItems(i)
+            setItems(i.items)
         })
     }, [])
 

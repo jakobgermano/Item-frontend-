@@ -1,11 +1,19 @@
-import './App.css';
+import './App.scss';
 import Items from './Items';
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import LoginForm from './LoginForm';
 
 function App() {
   const [items, setItems] = useState([])
   const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    fetch('/me').then((r) => {
+      if (r.ok) {
+        r.json().then((user) => setUser(user))
+      }
+    })
+  }, [])
 
   function handleLogout(){
     fetch('/logout', {
@@ -20,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <button id="logout" onClick={handleLogout} variant="contained" size="medium"> Logout</button>
-    <Items items={items} setItems={setItems}/>
+    <Items items={items} setItems={setItems} user={user}/>
     </div>
   );
 }
