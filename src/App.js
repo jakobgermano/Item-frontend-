@@ -29,6 +29,7 @@ function App() {
     <div className="App">
       <button id="logout" onClick={handleLogout} variant="contained" size="medium"> Logout</button>
     <Items items={items} setItems={setItems} user={user}/>
+    <ItemForm/>
     </div>
   );
 }
