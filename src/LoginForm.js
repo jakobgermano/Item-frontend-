@@ -8,7 +8,8 @@ function LoginForm({setUser}){
     const [error, setError] = useState("")
 
     
-
+// containing fetch create request for creating the user session apon login
+//and input form for entering login credentials
 
     function handleSubmit(e){
         e.preventDefault()

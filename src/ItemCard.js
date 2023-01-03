@@ -1,5 +1,5 @@
 import React from 'react'
-
+//this component is what u want to render with each individual item
 function ItemCard({item}) {
     return(
         <div>

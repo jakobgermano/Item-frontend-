@@ -4,6 +4,8 @@ function SignUpForm({setUser}){
     const [password, setPassword] = useState("")
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
 
+// creating new login credentials to created in database
+// post request because it is a create request
 
     function handleSubmit(e){
         e.preventDefault()
