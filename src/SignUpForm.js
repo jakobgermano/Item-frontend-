@@ -14,7 +14,9 @@ function SignUpForm({setUser}){
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({user: {username, password,  password_confirmation: passwordConfirmation}})
+            body: JSON.stringify({
+                user: {username, password, 
+                 password_confirmation: passwordConfirmation}})
         }).then(r => {
             (r.json().then(user => setUser(user)))
         }).then(

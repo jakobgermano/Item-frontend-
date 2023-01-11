@@ -4,6 +4,7 @@ import ItemCard from './ItemCard';
 function Items({ items, setItems, user}) {
     //useEffect for rendering each item
     // changin the path to users/user.id to render each item according to user.id
+    //the route was originally to the index items controller action on the backend
     useEffect(() => {
         fetch(`users/${user.id}`) 
         .then((r) => r.json())
@@ -24,3 +25,6 @@ function Items({ items, setItems, user}) {
 }
 //calling the allItems variable containing each itemCard
 export default Items;
+
+//calling the state setter function at the end of the useEffect request
+//want to render all items as long as the app is running

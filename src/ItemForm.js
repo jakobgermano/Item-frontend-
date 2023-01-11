@@ -37,11 +37,17 @@ function ItemForm({addItem}) {
         <form onSubmit={handleSubmit}>
             <label>Name:</label>
             <input type="text" id="name" value={name} onChange={e => setName(e.target.value)} ></input>
-            <label>wei</label>
-
+            <label>weight</label>
+            <input type ="text" id="weight" value={weight} onChange={e => setWeight(e.target.value)} ></input>
         </form>
         </div>
     )
 }
 
 export default ItemForm;
+
+//on change is what happens to the input after hitting submit, it is equal to a arrow function
+//that sets the setter function to the target value, e stands for event 
+//Pass an Input Value to a Function in a React Component
+//Storing an Input Value Inside of State
+//onsubmit and onChange are event handlers, they need to be passed a function {}
