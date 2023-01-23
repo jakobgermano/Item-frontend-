@@ -1,7 +1,7 @@
 import React, {useState} from 'react'; 
 
 //component for adding an item 
-function ItemForm({addItem}) {
+function ItemForm({addItem, user}) {
     const [name, setName] = useState("")
     const [price, setPrice] = useState(null) 
     const [weight, setWeight] = useState(null)

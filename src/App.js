@@ -2,7 +2,8 @@ import './App.scss';
 import Items from './Items';
 import {useEffect, useState} from 'react'
 import LoginForm from './LoginForm';
-
+import ItemForm from './ItemForm';
+//adding your state in the highest component
 function App() {
   const [items, setItems] = useState([])
   const [user, setUser] = useState(null)
@@ -38,7 +39,7 @@ function App() {
     <div className="App">
       <button id="logout" onClick={handleLogout} variant="contained" size="medium"> Logout</button>
     <Items items={items} setItems={setItems} user={user}/>
-    <ItemForm addItem={addItem}/>
+    <ItemForm addItem={addItem} user={user}/>
     </div>
   );
 }

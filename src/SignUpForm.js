@@ -9,6 +9,9 @@ function SignUpForm({setUser}){
 
     function handleSubmit(e){
         e.preventDefault()
+        setUsername("")
+        setPassword("")
+        setPasswordConfirmation("")
         fetch("/signup",{
             method: "POST", 
             headers: {
