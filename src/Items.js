@@ -1,15 +1,15 @@
 import React, {useEffect} from 'react';
 import ItemCard from './ItemCard';
 
-function Items({ items, setItems, user}) {
+function Items({ items, setItems,}) {
     //useEffect for rendering each item
     // changin the path to users/user.id to render each item according to user.id
     //the route was originally to the index items controller action on the backend
     useEffect(() => {
-        fetch(`users/${user.id}`) 
+        fetch(`/items`) 
         .then((r) => r.json())
         .then((i) => {
-            setItems(i.items)
+            setItems(i)
         })
     }, [])
 //iterating over each item, rending each items own "card" containg each individual item
